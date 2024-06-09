@@ -1,1 +1,85 @@
+import datetime as dt
+
+
+#month, year, date
+current_date = dt.date.today()
+print(current_date)
+
+cu_da = dt.date(2024, 6,9)
+print(cu_da)
+x =dt.date.today()
+print(x.year)
+print(x.month)
+print(x.day)
+
+#time
+time1 = dt.time(15,1,49,566)
+print(time1)
+
+print("Hour", time1.hour)
+print("minute", time1.minute)
+print("seconds",time1.second)
+print("micro seconds", time1.microsecond)
+
+#date_with_time = dt.datetime(2024,6,9,15,12,45,56767)
+date_with_time = dt.datetime.today()
+print(date_with_time)
+print(date_with_time.day)
+print(date_with_time.date())
+print(date_with_time.month)
+print(date_with_time.year)
+print(date_with_time.hour)
+print(date_with_time.time())
+print(date_with_time.minute)
+print(date_with_time.second)
+print(date_with_time.microsecond)
+
+
+
+present = dt.datetime.now()
+future = dt.datetime(2025,1,30,5,15,45,567857)
+difference = present - future
+print(difference)
+print(difference.days)
+
+detail_date = present.strftime("%a %b %M, %Y")
+print(detail_date)
+
+detail_date = present.strftime("%A %B %m, %y")
+
+print(detail_date)
+detail_date = present.strftime("%d , %w , %I %p")
+print(detail_date)
+
+# a is day name"sun", A is day name "Sunday" , b is month name "jan", B is month name "January"
+# -d is date " 7,12", d is "01,02,09,11"
+# w is weekday in decimal i.e 0,1,2,3,4,5,6 starts from sunday as 0 
+# I is for 12 hr clock format
+# p is for AM or PM
+
+date_string = "2024 Nov 27"
+detail_date = dt.datetime.strptime(date_string,"%Y %b %d")
+print(detail_date)
+
+
+us_time = "January 29 2024"
+indian_time_conversion = dt.datetime.strptime(us_time,"%B %d %Y")
+print(indian_time_conversion)
+#indian_time_conversion = dt.datetime.indian_time_conversion()
+indian_time = indian_time_conversion.strftime("%d %B %Y")
+print(indian_time)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
