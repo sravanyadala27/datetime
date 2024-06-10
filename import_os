@@ -1,1 +1,35 @@
+import os
+x = os.getcwd()
+print(x)
+os.chdir(r"C:\Users\yadalavx\OneDrive - Intel Corporation\Desktop\Python")
+print(os.getcwd())
+y = open("kumar.txt", "w")
+y.write("this is a [ractise]")
+y.close()
 
+print(os.listdir())
+#os.mkdir("import os")
+print(os.getcwd())
+os.rename("kumar.txt","import_os.txt")
+print(os.listdir())
+os.remove("import_os.txt")
+#os.rmdir("import os")
+print(os.listdir())
+path = os.path.join("/home","/etc/def/grub")
+print(path)
+head,tail = os.path.split("c:/Users/yadalavx/OneDrive - Intel Corporation/Desktop/Python_sravan/datetime.py")
+print(head)
+print(tail)
+path_exist = os.path.exists("c:/Users/yadalavx/OneDrive - Intel Corporation/Desktop/Python_sravan/datetime.py")
+print(path_exist)
+print(os.path.isdir("c:/Users/yadalavx/OneDrive - Intel Corporation/Desktop/Python_sravan/datetime.py"))
+
+
+print(os.path.isfile("c:/Users/yadalavx/OneDrive - Intel Corporation/Desktop/Python_sravan/datetime.py"))
+
+PATH = os.getenv("Path")
+print(PATH)
+os.environ["sravan"] = "sravan"
+sra = os.getenv("sravan")
+print(sra)
+os.system('setx ENV_PRACTISE "practise"')
